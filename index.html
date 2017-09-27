@@ -1,0 +1,40 @@
+<!-- Based on Pool Dozer Design HTML file by Jim McCann -->
+
+<html>
+  
+<head>
+    <title>Game3: Angry Balls</title>
+</head>
+
+<body>
+  <h1 style="margin-bottom:0">Game3: Angry Balls</h1>
+  <p style="font-size:14px;line-height:14px;margin:5px 0 15px 20px">Designed by Uday Uppal</p>
+
+  <p>"Angry Balls" takes its inspiration from <a href="https://en.wikipedia.org/wiki/Angry_Birds">Angry Birds</a>, and focuses on shooting a ball through obstacles into a scoring region.</p>
+
+  <div style="text-align:center;margin-bottom:15px" ><img src="level1.png" width="512" height="384"></div>
+  <div style="text-align:center;margin-bottom:15px"><img src="level2.png" width="512" height="384"></div>
+  <div style="text-align:center;margin-bottom:15px"><img src="level3.png" width="512" height="384"></div>
+
+  <h2>Gameplay</h2>
+  <p>
+  The player attempts to shoot a ball from the left side of the screen into a scoring region on the right side of the screen. The way is blocked by certain obstacles that the ball can bounce off. The ball can also bounce off top, bottom, left, and right walls. There are three levels (shown above in order), and the player has three balls. The player loses a ball if it comes to a stop after being shot without being inside the scoring region. The game ends either when the player successfully scores on level 3, or when the player loses their last ball.
+  </p>
+
+  <p>
+  The player shoots by clicking and dragging the ball with the left mouse button, then letting go. The player can aim by moving the mouse up and down, and the power is based on how far back the player drags the ball before letting go (similar to <a href="https://en.wikipedia.org/wiki/Angry_Birds">Angry Birds</a>). There is a limit to how far the player can drag the ball. 
+  </p>
+
+  <h2>Physics</h2>
+  <p>The game runs on simple 2D physics.
+  Balls have velocities which are damped due to friction (so they will roll to a stop eventually), and collide with walls and obstacles in a manner that does not conserve velocity (bounces reduce the ball speed but send the ball in the expected direction). Ball velocity does not get damped while the ball is in the air, only when it is rolling along an object. Ball undergoes a gravitational force while it is in the air which accelerates it downward. Ball rotation is purely cosmetic, and should be computed from velocity and radius.
+  </p>
+  <p>
+  The ball is a circle, and walls and obstacles are rectangular as shown in the level previews. The scoring region is a section of the wall along the right side of the screen, with guards along the top and bottom as shown in the level previews.
+  </p>
+
+  <h2>View</h2>
+  <p>The game is played from a fixed camera looking at the level from one side.
+  </p>
+
+</body></html>
